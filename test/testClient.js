@@ -3,7 +3,6 @@ var autopatch = require('../lib/autopatch.js');
 var config = {
 	patchDir: './patches/',
 	db: {
-		client: 'pg',
 		host: 'localhost',
 		port: 5432,
 		user: 'api_gateway',
@@ -19,4 +18,3 @@ autopatch.run(config, function(err) {
 	console.log('autopatch done');
 	process.exit();
 });
-
