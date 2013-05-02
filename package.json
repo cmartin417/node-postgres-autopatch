@@ -1,0 +1,13 @@
+{
+	"author": "Clint Martin",
+	"name": "postgres-autopatch",
+	"description": "Node application for automatically applying postgreSQL database patches.",
+	"version": "0.0.1",
+	"main": "./lib/autopatch",
+	"dependencies": {
+		"pg": "1.1.x"
+	},
+	"engines": {
+		"node": ">=0.10.4"
+	}
+}
