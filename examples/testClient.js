@@ -5,8 +5,8 @@ var config = {
 	db: {
 		host: 'localhost',
 		port: 5432,
-		user: 'api_gateway',
-		database: 'autopatcher_test',
+		user: 'db_user',
+		database: 'db_name',
 		password: 'password'
 	}
 };
