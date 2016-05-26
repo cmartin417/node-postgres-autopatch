@@ -1,23 +1,24 @@
 {
-	"author": "Clint Martin",
-	"name": "pg-autopatch",
-	"description": "Node application for automatically applying postgreSQL database patches.",
-	"version": "0.0.3",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/cmartin417/node-postgres-autopatch.git"
-	},
-	"keywords": [
-		"postgres",
-		"pg", 
-		"autopatch"
-	],
-	"main": "./lib/autopatch",
-	"dependencies": {
-		"pg": "1.1.x"
-	},
-	"devDependencies": {},
-	"engines": {
-		"node": ">=0.10.4"
-	}
+  "author": "Clint Martin",
+  "name": "pg-autopatch",
+  "description": "Node application for automatically applying postgreSQL database patches.",
+  "version": "0.0.3",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cmartin417/node-postgres-autopatch.git"
+  },
+  "keywords": [
+    "postgres",
+    "pg",
+    "autopatch"
+  ],
+  "main": "./lib/autopatch",
+  "dependencies": {
+    "pg": "1.1.x",
+    "async": "~0.2.9"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=0.10.4"
+  }
 }

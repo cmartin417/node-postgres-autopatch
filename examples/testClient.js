@@ -5,15 +5,16 @@ var config = {
 	db: {
 		host: 'localhost',
 		port: 5432,
-		user: 'db_user',
-		database: 'db_name',
+		user: 'postgres',
+		database: 'autopatch_test',
 		password: 'password'
 	}
 };
 
 autopatch.run(config, function(err) {
-	if (err)
-		console.log(err);
+	if (err) {
+        console.log('autopatch error: ', err);
+	}
 	
 	console.log('autopatch done');
 	process.exit();
