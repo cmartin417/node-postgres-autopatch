@@ -10,25 +10,28 @@ Node application for automatically applying postgreSQL database patches.
 
 #Installation
 
-`npm install postgres-autopatch`
+`npm install pg-autopatch`
 
 #Examples
 
-	var autopatch = require('../lib/autopatch.js');
+    var path = require('path');
+	var autopatch = require('pg-autopatch');
 
 	var config = {
-		patchDir: './patches/',
+		patchDir: path.resolve(__dirname, './patches/'),
+		dbType: 'postgres',
 		db: {
 			host: 'localhost',
 			port: 5432,
 			user: 'postgres',
 			database: 'db_name',
-			password: 'password'
+			password: 'password',
+			patchTableName: 'patches'
 		}
 	};
 
-	autopatch.run(config, function(err) {
-		console.log('autopatch done');
+	autopatch.run(config, function(err, newPatchesApplied) {
+		console.log('autopatch done. %d new patches applied', newPatchesApplied);
 	});
 
 #Notes
