@@ -14,8 +14,7 @@
   ],
   "main": "./lib/autopatch",
   "dependencies": {
-    "pg": "1.1.x",
-    "async": "~0.2.9"
+    "pg": "1.1.x"
   },
   "devDependencies": {},
   "engines": {
