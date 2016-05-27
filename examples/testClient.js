@@ -1,20 +1,24 @@
+var path = require('path');
 var autopatch = require('../lib/autopatch.js');
 
 var config = {
-	patchDir: './patches/',
+	patchDir: path.resolve(__dirname, './patches/'),
+    dbType: 'postgres',
 	db: {
 		host: 'localhost',
 		port: 5432,
-		user: 'db_user',
-		database: 'db_name',
-		password: 'password'
+		user: 'postgres',
+		database: 'autopatch_test',
+		password: 'password',
+		patchTableName: 'patches'
 	}
 };
 
-autopatch.run(config, function(err) {
-	if (err)
-		console.log(err);
+autopatch.run(config, function(err, newPatchCount) {
+	if (err) {
+        console.log('autopatch error: ', err);
+	}
 	
-	console.log('autopatch done');
+	console.log('autopatch done. %d new patches applied', newPatchCount);
 	process.exit();
 });
